@@ -72,3 +72,4 @@ wincertstore==0.2
 wrapt==1.11.2
 psycopg2==2.8.6
 pycrypto==2.6.1
+mozilla_django_oidc
