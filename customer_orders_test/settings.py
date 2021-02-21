@@ -26,7 +26,7 @@ SECRET_KEY = '=nk-8z+9p2(-8qo0$bkjrz9!qim@vj_p1jqap@wuchpg$&v6s0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['secret-chamber-89212','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['secret-chamber-89212.herokuapp.com','localhost','127.0.0.1']
 
 # Application definition
 
