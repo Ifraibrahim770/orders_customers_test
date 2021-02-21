@@ -59,8 +59,8 @@ OIDC_OP_JWKS_ENDPOINT = os.environ.get('OIDC_OP_JWKS_ENDPOINT')
 
 SMS_API_KEY = os.environ.get('SMS_API_KEY')
 
-LOGIN_REDIRECT_URL = "https://fierce-atoll-89314.herokuapp.com/"
-LOGOUT_REDIRECT_URL = "https://fierce-atoll-89314.herokuapp.com/"
+LOGIN_REDIRECT_URL = "https://secret-chamber-89212.herokuapp.com/"
+LOGOUT_REDIRECT_URL = "https://secret-chamber-89212.herokuapp.com//"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
