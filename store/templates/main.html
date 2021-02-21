@@ -1,0 +1,21 @@
+<div>
+{% if user.is_authenticated %}
+ <p>Welcome {{user.email}} Kindly Select an Option Below:</p>
+
+ <ul>
+  <li><a href="{% url 'AddCustomer' %}">Add a New Customer </a></li>
+   <li><a href="{% url 'MakeOrder' %}">Create Order for an Existing Customer </a></li>
+
+</ul>
+
+
+ <form action="{% url 'oidc_logout' %}" method="post">
+     {% csrf_token %}
+     <input type="submit" value="Logout">
+ </form>
+ {% else %}
+    <h2>Welcome, login below with OIDC</h2>
+    <br/>
+ <a href="{% url 'oidc_authentication_init' %}">Login</a>
+ {% endif %}
+</div>
