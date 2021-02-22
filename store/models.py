@@ -19,6 +19,7 @@ class Order(models.Model):
     item = models.CharField(null=False, max_length=40)
     quantity = models.IntegerField(null=True)
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True)
+    date_transaction = models.DateTimeField(auto_now_add=True, blank=False,null=True)
 
     def __str__(self):
         return str(self.trans_id)
