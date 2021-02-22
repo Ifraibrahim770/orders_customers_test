@@ -15,7 +15,6 @@ import os
 
 
 def sign_in(request):
-    print('the hell', os.environ.get('SMS_API_KEY'))
     return render(request, 'main.html', )
 
 
@@ -87,7 +86,6 @@ class AddOrder(APIView):
                     print('item saved ', key)
 
                 except Exception as e:
-                    # print('Hii ndo kitu inaleta ufala', e)
                     return Response({
                         'status': False,
                         'Detail': "the quantity of " + key + " is badly formatted, provide a valid number"
