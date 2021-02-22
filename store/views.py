@@ -96,7 +96,6 @@ class AddOrder(APIView):
                               'been created'  # TODO SEND THIS MESSAGE TO CUSTOMERS PHONE NUMBER
 
             print(message)
-            print('DATA',os.getenv('API_USER'))
             link = 'http://bauersms.co.ke/adminx/api.php?apikey=[API_KEY]&apitext=[Your message]&tel=[Your+Recipients]&method=sendsms'
             link = link.replace('[Your+Recipients]', customer.phone)
             link = link.replace('[Your message]', message)
