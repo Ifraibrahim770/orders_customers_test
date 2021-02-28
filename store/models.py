@@ -16,7 +16,7 @@ class Customer(models.Model):
 
 class Order(models.Model):
     trans_id = models.CharField(null=False, max_length=40)
-    item = models.CharField(null=False, max_length=40)
+    item = models.CharField(null=False, max_length=46)
     quantity = models.IntegerField(null=True)
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True)
     date_transaction = models.DateTimeField(auto_now_add=True, blank=False,null=True)

@@ -60,7 +60,7 @@ OIDC_OP_JWKS_ENDPOINT = os.environ.get('OIDC_OP_JWKS_ENDPOINT')
 SMS_API_KEY = os.environ.get('SMS_API_KEY')
 
 LOGIN_REDIRECT_URL = "https://secret-chamber-89212.herokuapp.com/"
-LOGOUT_REDIRECT_URL = "https://secret-chamber-89212.herokuapp.com//"
+LOGOUT_REDIRECT_URL = "https://secret-chamber-89212.herokuapp.com/"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -98,10 +98,17 @@ WSGI_APPLICATION = 'customer_orders_test.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DATABASE_USER_NAME'),
+        'HOST': os.environ.get('DATABASE_HOST'),
+        'PORT': 5432,
+        'USER': os.environ.get('DATABASE_USER'),
+        'PASSWORD': os.environ.get('DATABASE_PASSWORD')
+
     }
 }
+
+#postgres://ytlaweqkcrbyzc:18bb39c6c81aee5d44c52f416a18152f2f126469bc5e1e266869bec9852e054a@ec2-63-34-97-163.eu-west-1.compute.amazonaws.com:5432/d435i3k8qad3d8
 
 
 # Password validation
